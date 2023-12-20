@@ -3,11 +3,11 @@ import CartWidget from "../CartWidget/CartWidget"
 const NavBar = () => {
     return (
         <nav>
-        <h3>Ecommerce</h3>
+        <h3>Productos Cabañas Intiyaco</h3>
             <div>
-                <button>Boton1</button>
-                <button>Boton2</button>
-                <button>Boton3</button>
+                <button>Remera</button>
+                <button>Taza</button>
+                <button>Llavero</button>
             </div>
             <CartWidget/>
         </nav>
