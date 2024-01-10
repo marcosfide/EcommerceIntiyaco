@@ -1,17 +1,11 @@
 import whiteCart from './assets/whiteCart.png'
+import './CartWidget.css'
 
 const CartWidget = () => {
-    const cartStyle = {
-        width: '22px',
-        padding: '5px',
-        marginTop: '5px',
-        marginBottom: '-8px',
-        color: 'white'
-    };
 
     return (
-        <div>
-            <img src={whiteCart} alt="cart" style={cartStyle} />
+        <div className='CartWidget'>
+            <img src={whiteCart} alt="cart" className='WhiteCart' />
             0
         </div>
     );

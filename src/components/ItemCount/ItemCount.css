@@ -1,0 +1,12 @@
+.Counter{
+    display: flex;
+    flex-direction: column;
+}
+.Controls{
+    display: flex;
+    justify-content: center;
+}
+.Button{
+    height: fit-content;
+    margin: auto 1rem;
+}

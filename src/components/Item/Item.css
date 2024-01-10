@@ -1,0 +1,34 @@
+.CardItem{
+    border: solid 1px #333333;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 5px;
+}
+
+.ItemFooter{
+    height: 38px;
+    & .Option{
+        margin-bottom: 40px;
+    }
+}
+
+
+.Option {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    margin: 3px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #2A3F35;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .Option:hover {
+    border-color: #a27261;
+  }
+  .Option:focus,
+  .Option:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }

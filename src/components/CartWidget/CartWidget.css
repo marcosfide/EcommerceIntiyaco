@@ -1,0 +1,10 @@
+.WhiteCart{
+    width: 22px;
+    padding: 5px;
+    color: white
+}
+
+.CartWidget{
+    display: flex;
+    align-items: center;
+}

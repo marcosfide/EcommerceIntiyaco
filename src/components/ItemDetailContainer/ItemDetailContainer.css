@@ -1,0 +1,7 @@
+.ItemDetailContainer{
+    width: fit-content;
+    margin: auto;
+    & .CardItem{
+        height: 39rem;
+    }
+}
