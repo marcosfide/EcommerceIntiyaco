@@ -5,6 +5,7 @@
 .Controls{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .Button{
     height: fit-content;
