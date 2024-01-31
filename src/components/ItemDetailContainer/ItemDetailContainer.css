@@ -1,7 +1,8 @@
 .ItemDetailContainer{
     width: fit-content;
     margin: auto;
+    max-width: 350px;
     & .CardItem{
-        height: 39rem;
+        height: fit-content;
     }
 }

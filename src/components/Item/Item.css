@@ -6,9 +6,10 @@
 }
 
 .ItemFooter{
-    height: 38px;
+  height: fit-content;
+  margin: 8px;
     & .Option{
-        margin-bottom: 40px;
+        margin: auto;
     }
 }
 
@@ -26,9 +27,15 @@
     transition: border-color 0.25s;
   }
   .Option:hover {
-    border-color: #a27261;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.3), 0 4px 5px 0 rgba(0,0,0,.3), 0 1px 10px 0 rgba(0,0,0,.3);
+    transition: .2s;
   }
   .Option:focus,
   .Option:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
+  }
+
+
+  .Info{
+    margin: 2px;
   }

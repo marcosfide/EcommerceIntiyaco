@@ -1,0 +1,38 @@
+.CartItemList{
+    display: flex;
+    flex-direction: column;
+}
+
+.ListCart{
+    list-style: none;
+    font-size: 1.2rem;
+    border: solid 2px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 1rem;
+    margin: auto;
+}
+
+.ListCart td{
+    width: 6rem;
+}
+
+.ListCart .btn-x{
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    &:hover{
+        transform: none;
+        color: #f27474;
+        transition: .2s;
+        box-shadow: 3px 2px #3d3d3d;
+    }
+}
+
+.CartItemList .Option{
+    margin: 10px auto;
+}

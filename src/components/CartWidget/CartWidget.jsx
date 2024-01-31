@@ -1,13 +1,23 @@
 import whiteCart from './assets/whiteCart.png'
 import './CartWidget.css'
+import { useCart } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
+    const {getTotalQuantity} = useCart()
 
     return (
-        <div className='CartWidget'>
+        <>
+        {
+        getTotalQuantity() > 0 ? 
+        <Link to='/cart' className='CartWidget'>
             <img src={whiteCart} alt="cart" className='WhiteCart' />
-            0
-        </div>
+            {getTotalQuantity()}
+        </Link>
+        :
+        <></>
+        }
+        </>
     );
 }
 

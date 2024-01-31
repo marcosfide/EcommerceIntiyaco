@@ -1,25 +1,20 @@
-import { useContext, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css"
 import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
-
+import { useCart } from "../../context/CartContext";
 
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) => {
-    const [quantityAdded, setQuantityAdded] = useState(0);
-
-    const {addItem} = useContext(CartContext);
+    const { addItem, getProductQuantity } = useCart()
 
     const handleOnAdd = (quantity) => {
-        setQuantityAdded(quantity);
-
-        const item = {
-            id, name, price
-        };
-
-        addItem(item, quantity);
+        const objProductToAdd = {
+            id, name, price, quantity
+        }
+        addItem(objProductToAdd)
     }
+
+    const productQuantity = getProductQuantity(id)
 
     return(
         <article className="CardItem">
@@ -31,7 +26,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
             <picture>
                 <img src={img} alt={name} className="ItemImg" />
             </picture>
-            <section>
+            <section className="InfoContainerItemDetail">
                 <p className="Info">
                     Categoria: {category}
                 </p>
@@ -43,12 +38,11 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
                 </p>
             </section>
             <footer className="ItemFooter">
+                <ItemCount initial={productQuantity} stock={stock} onAdd={handleOnAdd} className='ItemCount'/>
                 {
-                    quantityAdded > 0 ? (
-                        <Link to='/cart' className="Button">Terminar compra</Link>
-                    ) : (
-                        <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
-                    )
+                productQuantity > 0 ? 
+                <Link to='/cart' className="Option">Ver carrito</Link> :
+                <></>
                 }
             </footer>
         </article>
