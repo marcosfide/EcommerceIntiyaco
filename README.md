@@ -11,6 +11,11 @@ Currently, two official plugins are available:
 
 This project is an ecommerce developed with ReactJS using Vite as a build tool.
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+
 ## Installation
 
 Make sure you have Node.js installed on your system. Then, you can follow these steps to set up and run the project:
