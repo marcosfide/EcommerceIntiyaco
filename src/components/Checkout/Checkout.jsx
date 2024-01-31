@@ -3,12 +3,14 @@ import { useCart } from "../../context/CartContext";
 import OrderForm from "../OrderForm/OrderForm";
 import { db } from "../../services/firebase/fireBaseConfig";
 import { useState } from "react";
-import Toastify from 'toastify-js'
+import Toastify from 'toastify-js';
+import './Checkout.css'
 
 const Checkout = () => {
 
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState(null);
+    const [orderInfo, setOrederInfo] = useState(null)
 
     const {cart, getTotal, clearCart} = useCart();
 
@@ -20,6 +22,7 @@ const Checkout = () => {
                 items: cart,
                 total: getTotal()
             }
+            setOrederInfo(objOrder)
     
             const batch = writeBatch(db)
             const outOfStock = []
@@ -76,12 +79,29 @@ const Checkout = () => {
     }
 
     if(loading){
-        return <h2>Se esta generando su orden... Por favor aguarde un momento</h2>
+        return <h2>Se está generando su orden... Por favor aguarde un momento</h2>
     }
 
     if(orderId){
-        return <h2>El id de su compra es {orderId}</h2>
+        return (
+            <div className="order-details-container">
+                <h1>Detalle de la compra</h1>
+                <div>
+                    <strong>ID de la compra:</strong> {orderId}
+                </div>
+                <div>
+                    <strong>Nombre del comprador:</strong> {orderInfo.buyer.name}
+                </div>
+                <div>
+                    <strong>Email del comprador:</strong> {orderInfo.buyer.email}
+                </div>
+                <div>
+                    <strong>Valor de la orden:</strong> ${orderInfo.total.toFixed(2)}
+                </div>
+            </div>
+        )
     }
+    
 
 
     return (
