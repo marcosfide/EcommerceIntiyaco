@@ -88,18 +88,6 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = () => {
         setCart([])
-        Toastify({
-            text: `El carrito ha sido vaciado`,
-            duration: 3000,
-            close: false,
-            gravity: "top",
-            position: "right",
-            stopOnFocus: true,
-            style: {
-            background: "linear-gradient(to right, rgb(191 37 37), rgb(185 201 61))",
-            },
-            onClick: function(){}
-        }).showToast();
     }
 
     const getProductQuantity = (productId) => {

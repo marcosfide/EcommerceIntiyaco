@@ -1,0 +1,38 @@
+.Form{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 25rem;
+    height: 20rem;
+    margin: auto;
+}
+
+.Inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    max-width: 26rem;
+    min-width: 17rem;
+    margin: auto;
+    font-size: 1.15rem;
+    text-align: left;
+    & input{
+        border-radius: 5px;
+        height: 1.25rem;
+    }
+}
+
+.ButtonSubmit{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & button{
+        height: 2rem;
+        width: 5rem;
+        font-size: 1.15rem;
+    }
+}

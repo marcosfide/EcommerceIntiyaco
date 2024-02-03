@@ -1,0 +1,13 @@
+.Footer{
+    & .Contactos{
+        text-align: left;
+        margin-left: 10px;
+        & .InfoContactos{
+            display: flex;
+            flex-wrap: wrap;
+            & p{
+                margin: 0 10px;
+            }
+        }
+    }
+}

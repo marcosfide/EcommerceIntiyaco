@@ -1,3 +1,8 @@
+.ItemDetail{
+    display: flex;
+    flex-direction: column;
+}
+
 .ItemImg{
     width: 16rem;
     margin: 3px;
@@ -5,6 +10,22 @@
 }
 
 .InfoContainerItemDetail{
+    display: flex;
     text-align: left;
     padding: 2px 32px;
-  }
+}
+
+.RightDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    & .Description{
+        margin-left: 20px;
+    }
+    & .ItemFooter{
+        font-size: 0.9rem;
+    }
+}
+

@@ -6,8 +6,11 @@
 .Controls{
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 70%;
     margin: auto;
+    & .Option{
+        padding: 0.5em 1.1em;
+    }
 }
 .Button{
     height: fit-content;

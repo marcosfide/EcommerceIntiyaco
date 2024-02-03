@@ -106,7 +106,7 @@ const Checkout = () => {
 
     return (
         <>
-            <h1>CHECKOUT</h1>
+            <h1>Checkout</h1>
             <OrderForm onCreate={createOrder}/>
         </>
     )
