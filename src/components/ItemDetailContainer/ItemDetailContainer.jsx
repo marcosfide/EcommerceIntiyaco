@@ -1,35 +1,24 @@
-import { useEffect, useState } from "react";
 import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getProductsById } from "../../services/firebase/firestore/products";
+import { useAsync } from "../../hooks/useAsync";
 
 
 const ItemDetailContainer = ({title}) => {
-    const [product, setProduct] = useState(null)
-    const [loading, setLoading] = useState(false)
 
-    const { itemId } = useParams()
+    const {itemId} = useParams()
 
-    useEffect(() => {
-        setLoading(true);
+    const asyncFunction = () => getProductsById(itemId)
 
-        getProductsById(itemId)
-            .then(product => {
-                setProduct(product)
-            })
-            .catch(error => {
-                console.error('Hubo un error');
-            })
-            .finally(() => {
-                setLoading(false);
-            })
-        
-    }, [itemId]);
-    
+    const {loading, data: product, error} = useAsync(asyncFunction, itemId)
 
     if(loading){
-        return <h2>Cargando detalle del producto...</h2>
+        return <h1>Cargando productos...</h1>
+    }
+
+    if(error){
+        return <h1>Hubo un error</h1>
     }
 
     return(
