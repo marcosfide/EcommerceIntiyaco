@@ -39,3 +39,11 @@ Once the dependencies are installed, you can start the development server by run
 npm run dev
 ```
 This will start the Vite development server and open your application in the default browser. Additionally, any changes you make to the files will be automatically updated in the browser.
+
+
+## Video Demostrativo
+
+Puedes ver un demostrativo de la aplicación en este video:
+
+[Ver Video Demostrativo](https://firebasestorage.googleapis.com/v0/b/ecommerceintiyaco.appspot.com/o/Grabaci%C3%B3n%20de%20pantalla%20desde%2003-02-24%2014%3A04%3A34.webm?alt=media&token=42492d93-d0e8-4e4d-a013-4f8066547fa8)
+
