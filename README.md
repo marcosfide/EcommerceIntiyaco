@@ -47,3 +47,4 @@ Puedes ver un demostrativo de la aplicación en este video:
 
 [Ver Video Demostrativo](https://firebasestorage.googleapis.com/v0/b/ecommerceintiyaco.appspot.com/o/Grabaci%C3%B3n%20de%20pantalla%20desde%2003-02-24%2014%3A04%3A34.webm?alt=media&token=42492d93-d0e8-4e4d-a013-4f8066547fa8)
 
+file:///home/marcos/V%C3%ADdeos/Grabaciones%20de%20la%20pantalla/Grabaci%C3%B3n%20de%20pantalla%20desde%2020-03-24%2018:13:03.webm
