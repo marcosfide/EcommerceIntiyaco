@@ -1,3 +1,6 @@
+*{
+  color: #bfbfbf;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -39,7 +42,6 @@ h1 {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #bfbfbf;
   }
   a:hover {
     color: #747bff;
